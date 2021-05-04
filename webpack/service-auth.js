@@ -19,6 +19,7 @@ module.exports = async (env = {}) => {
           exposes: {
             "./App": "./exposes/app.ts",
             "./guard": "./exposes/guard.ts",
+            "./Link": "./exposes/link.ts",
           },
         }
       ),

@@ -16,13 +16,12 @@ export const App: FC = () => {
     });
   }, []);
 
-  console.log(access);
-
   if (access) {
     result = (
       <Layout headerExtra={<Button onClick={() => signOut()}>Sign out</Button>} footer={<>@service/core</>}>
         <Lazy serviceKey="dashboard" scope="dashboard" expose="./App" />
         <Lazy serviceKey="users" scope="users" expose="./App" />
+        <Lazy serviceKey="auth" scope="auth" expose="./Link" />
       </Layout>
     );
   } else {
