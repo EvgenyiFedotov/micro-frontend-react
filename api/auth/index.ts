@@ -13,3 +13,11 @@ export const signIn = (password: string) => {
 export const signOut = () => {
   return axios.post("/auth-be/api/sign-out");
 };
+
+export const getLinkToken = (password: string) => {
+  return axios.post("/auth-be/api/link/token", { password });
+};
+
+export const useLink = (linkTokenShort: string, password: string) => {
+  return axios.post("/auth-be/api/link", { linkTokenShort, password });
+};
